@@ -14,7 +14,7 @@ The website also recommensd activities to users depending on where they are visi
 
 ## Installation
 This program will run on any browser. Simply download the files and run them in your browser. 
-Alternatively you can simply visit the completed website. You can find the link to the website here.
+Alternatively you can simply visit the completed website. You can find the link to the website [here](https://samgrant4.github.io/Travel-Itinerary-Planner/).
 
 ## Usage
 This project is best used when planning a trip. The steps to use are as follows:  
@@ -39,4 +39,4 @@ If you want to contribute to this project reach out to the developer at samgrant
 This project was designed and created by Sam Grant. 
 
 ## License
-
+More information about the license can be found [here](master/LICENSE.md)

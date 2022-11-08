@@ -78,11 +78,22 @@
         window.onload = function () {
             var startDate = GetURLParameterValue("start-date");
             var endDate = GetURLParameterValue("end-date");
-            // var location = GetURLParameterValue("transportation-type");
-            // var location = GetURLParameterValue("departure-time");
-            // var location = GetURLParameterValue("arrival-time");
+            var transportType = GetURLParameterValue("transportation-type");
+            var departTime = GetURLParameterValue("departure-time");
+            var arriveTime = GetURLParameterValue("arrival-time");
+            var transportType2 = GetURLParameterValue("transportation-type2");
+            var departTime2 = GetURLParameterValue("departure-time2");
+            var arriveTime2 = GetURLParameterValue("arrival-time2");
+
             document.getElementById("start-date-span").textContent = startDate;
             document.getElementById("end-date-span").textContent = endDate;
+            document.getElementById("travel-dest-span").textContent = transportType;
+            document.getElementById("travel-home-span").textContent = transportType2;
+            document.getElementById("depart-span").textContent = departTime;
+            document.getElementById("depart-span2").textContent = departTime2;
+            document.getElementById("arrive-span").textContent = arriveTime;
+            document.getElementById("arrive-span2").textContent = arriveTime2;
+
         };
 
         function GetURLParameterValue(searchParameter) {
@@ -135,11 +146,12 @@
             </div>
             <div id="travel-plans">
                 <h2> Travel </h2>
-                <p> Traveling By: </p>
-                <p> Depart to destination: </p>
-                <p> Arrive at destination: </p>
-                <p> Depart to home: </p>
-                <p> Arrive at home: </p>
+                <p> Traveling to destination by: <span id="travel-dest-span"></span></p>
+                <p> Depart to destination: <span id="depart-span"></span></p>
+                <p> Arrive at destination: <span id="arrive-span"></span></p>
+                <p> Traveling home by: <span id="travel-home-span"></span></p>
+                <p> Depart to home: <span id="depart-span2"></span></p>
+                <p> Arrive at home: <span id="arrive-span2"></span></p>
             </div>
             <div id="accommodation-plans">
                 <h2> Accommodations </h2>

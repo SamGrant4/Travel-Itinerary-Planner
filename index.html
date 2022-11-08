@@ -63,6 +63,18 @@
             margin-bottom: 5px;
         }
     </style>
+        <script>
+            window.addEventListener("DOMContentLoaded", domLoaded);
+    
+            function domLoaded(){
+                var location = document.getElementById("location")
+                const submitButton = document.getElementById("submitBtn")
+    
+                submitButton.addEventListener('click', () => {
+                    sessionStorage.setItem("Location", location.value);
+                });
+            }
+        </script>
 </head>
 
 <body> 
@@ -80,9 +92,9 @@
         <!-- Destination Search -->
         <section class="searchDestination">
             <h1> Destinations </h1>
-            <form action="placeholder" method="POST">
-                <input type="text" name="location" id="location" placeholder="Search Destinations">
-                <input type="submit" value="Go">
+            <form action="planTrip.html" method="GET">
+                <input type="text" name="location" id="location" placeholder="Search Destinations" required>
+                <input type="submit" value="Go" id="submitBtn">
             </form>
             <img class="map" src="map.jpg" alt="Map Image">
         </section>

@@ -52,6 +52,10 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
+        .dates p input{
+            padding: 6px;
+            width: 12%;
+        }
         .transportation{
             text-align: center;
             background-color: white;
@@ -59,12 +63,20 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
+        .transportation p input{
+            padding: 6px;
+            width: 12%;
+        }
         .accommodation{
             text-align: center;
             background-color: white;
             padding: 10px;
             margin-top: 5px;
             margin-bottom: 5px;
+        }
+        .accommodation p input{
+            padding: 6px;
+            width: 12%;
         }
         input[type=submit]{
             background-color: greenyellow;
@@ -79,6 +91,24 @@
             text-align: center;
         }
     </style>
+    <script>
+        window.onload = function () {
+            var location = GetURLParameterValue("location");
+
+            document.getElementById("locat-span").textContent = location;
+        };
+
+        function GetURLParameterValue(searchParameter) {
+            var queryString = window.location.search.substring(1);
+            var URLFieldValues = queryString.split('&');
+            for (var i = 0; i < URLFieldValues.length; i++) {
+                var parameterValues = URLFieldValues[i].split('=');
+                if (parameterValues[0] == searchParameter) {
+                    return parameterValues[1];
+                }
+            }
+        };
+    </script>
 </head>
 
 <body> 
@@ -94,19 +124,19 @@
         </nav>
         <!-- Where  -->
         <section class="whereTo">
-            <h1> Plan a New Trip to...</h1>
+            <h1>Plan a New Trip to: <span id="locat-span"></span></h1>
         </section>
-        <form action="placeholder" method="POST">
+        <form action="travelPlans.html" method="GET">
             <!-- Dates -->
             <section class="dates">
-                <h2> Dates (optional) </h2>
+                <h2> Dates </h2>
                 <p>
                     <label for="start-date">Start Date:</label>
-                    <input type="text" name="start-date" id="end-date">
+                    <input type="date" name="start-date" id="end-date" required>
                 </p>
                 <p>
                     <label for="end-date">End Date:</label>
-                    <input type="text" name="end-date" id="end-date">
+                    <input type="date" name="end-date" id="end-date" required>
                 </p>
             </section>
             <!-- Travel -->
@@ -115,28 +145,28 @@
                 <h3> Getting There </h3>
                 <p>
                     <label for="transportation-type">How will you get there?:</label>
-                    <input type="text" name="transportation-type" id="transportation-type">
+                    <input type="text" name="transportation-type" id="transportation-type" required>
                 </p>
                 <p>
-                    <label for="depearture-time">Time of Departure:</label>
-                    <input type="text" name="depearture-time" id="depearture-time">
+                    <label for="departure-time">Time of Departure:</label>
+                    <input type="time" name="depearture-time" id="depearture-time" required>
                 </p>
                 <p>
                     <label for="arrival-time">Time of Arrival:</label>
-                    <input type="text" name="arrival-time" id="arrival-time">
+                    <input type="time" name="arrival-time" id="arrival-time" required>
                 </p>
                 <h3> Getting Back </h3>
                 <p>
                     <label for="transportation-type2">How will you get back?:</label>
-                    <input type="text" name="transportation-type2" id="transportation-type2">
+                    <input type="text" name="transportation-type2" id="transportation-type2" required>
                 </p>
                 <p>
                     <label for="depearture-time2">Time of Departure:</label>
-                    <input type="text" name="depearture-time2" id="depearture-time2">
+                    <input type="time" name="depearture-time2" id="depearture-time2" required>
                 </p>
                 <p>
                     <label for="arrival-time2">Time of Arrival:</label>
-                    <input type="text" name="arrival-time2" id="arrival-time2">
+                    <input type="time" name="arrival-time2" id="arrival-time2" required>
                 </p>
             </section>
             <!-- Accommodations -->
@@ -144,15 +174,15 @@
                 <h2> Accommodations </h2>
                 <p>
                     <label for="place-lodging">Where are you staying?:</label>
-                    <input type="text" name="place-lodging" id="place-lodging">
+                    <input type="text" name="place-lodging" id="place-lodging" required>
                 </p>
                 <p>
                     <label for="check-in-time">Time of Check In:</label>
-                    <input type="text" name="check-in-time" id="check-in-time">
+                    <input type="datetime-local" name="check-in-time" id="check-in-time" required>
                 </p>
                 <p>
                     <label for="check-out-time">Time of Check Out:</label>
-                    <input type="text" name="check-out-time" id="check-out-time">
+                    <input type="datetime-local" name="check-out-time" id="check-out-time" required>
                 </p>
             </section>
             <input type="submit" value="Start Planning">

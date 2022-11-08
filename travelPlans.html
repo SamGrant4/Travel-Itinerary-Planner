@@ -66,15 +66,21 @@
             margin-top: 5px;
             margin-bottom: 5px;
         }
+        form{
+            text-align: center;
+        }
+        input{
+            background-color: lightgreen;
+            border: none;
+            color: black;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 4px 2px;
+        }
     </style>
     <script>
-        window.addEventListener("DOMContentLoaded", domLoaded);
-
-        function domLoaded(){
-            var location2 = document.getElementById("location2")
-            location2.innerHTML = sessionStorage.getItem("Location");
-        }
-
         window.onload = function () {
             var startDate = GetURLParameterValue("start-date");
             var endDate = GetURLParameterValue("end-date");
@@ -99,7 +105,6 @@
             document.getElementById("lodging-span").textContent = lodging;
             document.getElementById("check-in-span").textContent = checkIn;
             document.getElementById("check-out-span").textContent = checkOut;
-
         };
 
         function GetURLParameterValue(searchParameter) {
@@ -112,6 +117,23 @@
                 }
             }
         };
+
+        window.addEventListener("DOMContentLoaded", domLoaded);
+
+        function domLoaded(){
+            var location2 = document.getElementById("location2")
+            // var startDate = document.getElementById("start-date-span")
+            // var endDate = document.getElementById("end-date-span")
+            // const saveButton = document.getElementById("saveBtn")
+
+            
+            location2.innerHTML = sessionStorage.getItem("Location");
+
+            // saveButton.addEventListener('click', () => {
+            //     sessionStorage.setItem("Start Date", startDate.value);
+            //     sessionStorage.setItem("End Date", endDate.value);
+            // });
+        }
     </script>
 </head>
 
@@ -166,6 +188,9 @@
                 <p> Check out time: <span id="check-out-span"></span></p>
             </div>
         </section>
+        <form method="GET" action="index.html">
+            <input type="submit" value="Save Trip"> 
+        </form>
         <!-- Notes -->
         <section class="notes">
             <h2> Notes </h2>

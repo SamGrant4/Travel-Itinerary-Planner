@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Itinerary Planner</title>
+    <style>
+        body{
+            background-color: lightgrey;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+        }
+        .navigation-bar ul {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            overflow: hidden;
+            list-style-type: none;
+        }
+        .navigation-bar li {
+            float: left;
+        }
+        .navigation-bar li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 15px 15px;
+            text-decoration: none;
+        }
+        .globe{
+            display: inline-block;
+            vertical-align: top;
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            margin-top: auto;   
+        }
+        #SignIn {
+            float: right;
+        }
+        h1{
+            text-align: center;
+        }
+        .explore-tab{
+            text-align: center;
+            background-color: white;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .plans-tab{
+            text-align: center;
+            background-color: white;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .notes{
+            text-align: center;
+            background-color: white;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+
+<body> 
+    <div class="grid-container">
+        <!-- Navigation Bar  -->
+        <nav class="navigation-bar">
+            <ul>
+                <li><img class="globe" src="globe.png" alt="Globe Image"></li>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="travelPlans.html"> Travel Plans </a></li>
+                <li id="SignIn"><a href="signIn.html"> Sign In </a></li>
+            </ul>
+        </nav>
+        <h1> Trip to...</h1>
+        <!-- Explore -->
+        <section class="explore-tab">
+            <div id="attractions">
+                <h2> Attractions </h2>
+                <div> <p> Place 1 </p> </div>
+                <div> <p> Place 2 </p> </div>
+                <div> <p> Place 3 </p> </div>
+            </div>
+            <div id="restaurants">
+                <h2> Restaurants </h2>
+                <div> <p> restaurant 1 </p> </div>
+                <div> <p> restaurant 2 </p> </div>
+                <div> <p> restaurant 3 </p> </div>
+            </div>
+
+        </section>
+        <!-- Plans -->
+        <section class="plans-tab">
+            <div id="travel-plans">
+                <h2> Travel </h2>
+                <p> Traveling By: </p>
+                <p> Depart to destination: </p>
+                <p> Arrive at destination: </p>
+                <p> Depart to home: </p>
+                <p> Arrive at home: </p>
+            </div>
+            <div id="accommodation-plans">
+                <h2> Accommodations </h2>
+                <p> Staying at: </p>
+                <p> Check in time: </p>
+                <p> Check out time: </p>
+            </div>
+        </section>
+        <!-- Plans -->
+        <section class="notes">
+            <h2> Notes </h2>
+            <textarea id="notes" name="notes" rows="4" cols="50" value="">
+                Write any notes here
+            </textarea>
+        </section>
+    </div>
+</body> 
+</html>

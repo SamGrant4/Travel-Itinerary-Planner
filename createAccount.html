@@ -42,7 +42,7 @@
         #SignIn {
             float: right;
         }
-        .sign-in{
+        .create-account{
             text-align: center;
             background-color: white;
             padding: 10px;
@@ -65,9 +65,13 @@
         </nav>
 
         <!-- Sign In -->
-        <section class="sign-in">
-            <h1> Sign In </h1>
+        <section class="create-account">
+            <h1> Create an Account </h1>
             <form action="index.html" method="GET">
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                </p>
                 <p>
                     <label for="user-name">User Name:</label>
                     <input type="text" name="user-name" id="user-name">
@@ -76,10 +80,8 @@
                     <label for="password">Password:</label>
                     <input type="password" name="password" id="password">
                 </p>
-                <input type="submit" value="Sign In">
+                <input type="submit" value="Create Account">
             </form>
-            <br>
-            <a href="createAccount.html"> Create an Account Here </a>
         </section>
     </div>
 </body> 

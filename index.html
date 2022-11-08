@@ -41,7 +41,7 @@
         }
         #SignIn {
             float: right;
-            padding: 15px 15px;
+            /* padding: 15px 15px; */
         }
         .searchDestination{
             background-color: lightblue;
@@ -95,8 +95,9 @@
 
             window.onload = function () {
                 var userName = GetURLParameterValue("user-name");
-
-                document.getElementById("sign-in-a").textContent = userName;
+                if(userName != undefined){
+                    document.getElementById("sign-in-a").textContent = userName;
+                }
             };
 
             function GetURLParameterValue(searchParameter) {

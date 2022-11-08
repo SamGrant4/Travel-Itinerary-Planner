@@ -6,11 +6,11 @@ flights, and activities. This solves the problem of key travel information being
 The website also recommensd activities to users depending on where they are visiting.  
 
 ## Table of Contents  
-* Installation
-* Usage
-* Contributing
-* Credits
-* License
+* [Installation](https://github.com/GUWebDevelopment/cpsc-332-web-development-final-project-SamGrant4/blob/master/README.md#installation)
+* [Usage](https://github.com/GUWebDevelopment/cpsc-332-web-development-final-project-SamGrant4/blob/master/README.md#usage)
+* [Contributing](https://github.com/GUWebDevelopment/cpsc-332-web-development-final-project-SamGrant4/blob/master/README.md#contributing)
+* [Credits](https://github.com/GUWebDevelopment/cpsc-332-web-development-final-project-SamGrant4/blob/master/README.md#credits)
+* [License](https://github.com/GUWebDevelopment/cpsc-332-web-development-final-project-SamGrant4/blob/master/README.md#license)
 
 ## Installation
 This program will run on any browser. Simply download the files and run them in your browser. 

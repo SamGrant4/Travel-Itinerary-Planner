@@ -41,6 +41,7 @@
         }
         #SignIn {
             float: right;
+            padding: 15px 15px;
         }
         .searchDestination{
             background-color: lightblue;
@@ -91,6 +92,23 @@
                     tripContainer.classList.add('hide')
                 }
             }
+
+            window.onload = function () {
+                var userName = GetURLParameterValue("user-name");
+
+                document.getElementById("sign-in-a").textContent = userName;
+            };
+
+            function GetURLParameterValue(searchParameter) {
+                var queryString = window.location.search.substring(1);
+                var URLFieldValues = queryString.split('&');
+                for (var i = 0; i < URLFieldValues.length; i++) {
+                    var parameterValues = URLFieldValues[i].split('=');
+                    if (parameterValues[0] == searchParameter) {
+                        return parameterValues[1];
+                    }
+                }
+            };
         </script>
 </head>
 
@@ -102,7 +120,7 @@
                 <li><img class="globe" src="globe.PNG" alt="Globe Image"></li>
                 <li><a href="index.html"> Home </a></li>
                 <li><a href=#trips-planned> Travel Plans </a></li>
-                <li id="SignIn"><a href="signIn.html"> Sign In </a></li>
+                <li id="SignIn"><a href="signIn.html" id="sign-in-a"> Sign In </a></li>
             </ul>
         </nav>
 

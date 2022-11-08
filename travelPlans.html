@@ -84,15 +84,21 @@
             var transportType2 = GetURLParameterValue("transportation-type2");
             var departTime2 = GetURLParameterValue("departure-time2");
             var arriveTime2 = GetURLParameterValue("arrival-time2");
+            var lodging = GetURLParameterValue("place-lodging");
+            var checkIn = GetURLParameterValue("check-in-time");
+            var checkOut = GetURLParameterValue("check-out-time");
 
             document.getElementById("start-date-span").textContent = startDate;
             document.getElementById("end-date-span").textContent = endDate;
             document.getElementById("travel-dest-span").textContent = transportType;
             document.getElementById("travel-home-span").textContent = transportType2;
             document.getElementById("depart-span").textContent = departTime;
-            document.getElementById("depart-span2").textContent = departTime2;
             document.getElementById("arrive-span").textContent = arriveTime;
+            document.getElementById("depart-span2").textContent = departTime2;
             document.getElementById("arrive-span2").textContent = arriveTime2;
+            document.getElementById("lodging-span").textContent = lodging;
+            document.getElementById("check-in-span").textContent = checkIn;
+            document.getElementById("check-out-span").textContent = checkOut;
 
         };
 
@@ -155,9 +161,9 @@
             </div>
             <div id="accommodation-plans">
                 <h2> Accommodations </h2>
-                <p> Staying at: </p>
-                <p> Check in time: </p>
-                <p> Check out time: </p>
+                <p> Staying at: <span id="lodging-span"></span></p>
+                <p> Check in time: <span id="check-in-span"></span></p>
+                <p> Check out time: <span id="check-out-span"></span></p>
             </div>
         </section>
         <!-- Notes -->

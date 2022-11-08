@@ -39,4 +39,4 @@ If you want to contribute to this project reach out to the developer at samgrant
 This project was designed and created by Sam Grant. 
 
 ## License
-More information about the license can be found [here](master/LICENSE.md)
+More information about the license can be found [here](LICENSE.md)

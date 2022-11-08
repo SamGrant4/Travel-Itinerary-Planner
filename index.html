@@ -6,10 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Travel Itinerary Planner</title>
+    <style>
+        body{
+            background-color: lightgrey;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto;
+        }
+        .navigation-bar ul {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            overflow: hidden;
+            list-style-type: none;
+        }
+        .navigation-bar li {
+            float: left;
+        }
+        .navigation-bar li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 15px 15px;
+            text-decoration: none;
+        }
+        .globe{
+            display: inline-block;
+            vertical-align: top;
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            margin-top: auto;   
+        }
+        #SignIn {
+            float: right;
+        }
+        .searchDestination{
+            background-color: lightblue;
+            padding: 10px;
+            text-align: center;
+        }
+        .yourTrips{
+            background-color: lightgreen;
+            padding: 10px;
+        }
+        .map{
+            width: 463px;
+            height: 307px;
+            padding: 10px;
+        }
+        .yourTrips div{
+            background-color: aqua;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
-<body>
-    <p> Hello World!</p>
-</body>
+<body> 
+    <div class="grid-container">
+        <nav class="navigation-bar">
+            <ul>
+                <li><img class="globe" src="globe.png" alt="Globe Image"></li>
+                <li><a href=#home> Home </a></li>
+                <li><a href=#ed> Travel Plans </a></li>
+                <li id="SignIn"><a href=#SignIn> Sign In </a></li>
+            </ul>
+        </nav>
+        <section class="searchDestination">
+            <h1> Destinations </h1>
+            <form action="placeholder" method="POST">
+                <input type="text" name="location" id="location" placeholder="Search Destinations">
+                <input type="submit" value="Go">
+            </form>
+            <img class="map" src="map.jpg" alt="Map Image">
+        </section>
+        <section class="yourTrips">
+            <h2> Your Trips </h2>
+            <div> <p> Trip 1 </p></div>
+            <div> <p> Trip 2 </p></div>
+            <div> <p> Trip 3 </p></div>
+        </section>
+    </div>
+</body> 
 
 </html>

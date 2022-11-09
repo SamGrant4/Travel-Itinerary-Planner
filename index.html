@@ -76,6 +76,7 @@
                 var tripArrive = document.getElementById("trip-arrive-span")
                 var tripDepart = document.getElementById("trip-depart-span")
                 var tripContainer = document.getElementById("trip-container")
+                var noteSection = document.getElementById("notes-span")
 
                 const submitButton = document.getElementById("submitBtn")
     
@@ -86,6 +87,7 @@
                     tripLocation.innerHTML = sessionStorage.getItem("Location");
                     tripArrive.innerHTML = sessionStorage.getItem("Start Date");
                     tripDepart.innerHTML = sessionStorage.getItem("End Date");
+                    noteSection.innerHTML = sessionStorage.getItem("Notes");
                     tripContainer.classList.remove('hide')
                 }
                 else{
@@ -142,6 +144,7 @@
                 <h3>Trip to <span id="trip-location-span"></span></h3>
                 <p> Arrive on: <span id="trip-arrive-span"></span></p> 
                 <p> Depart on: <span id="trip-depart-span"></span></p> 
+                <p> Notes: <span id="notes-span"></span></p> 
             </div>
         </section>
     </div>

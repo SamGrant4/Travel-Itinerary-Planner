@@ -122,8 +122,14 @@
 
         function domLoaded(){
             var location2 = document.getElementById("location2")
+            var notes = document.getElementById("notes")
+            const saveButton2 = document.getElementById("saveBtn2")
             
             location2.innerHTML = sessionStorage.getItem("Location");
+
+            saveButton2.addEventListener('click', () => {
+                sessionStorage.setItem("Notes", notes.value);
+            });
         }
     </script>
 </head>
@@ -180,7 +186,7 @@
             </div>
         </section>
         <form method="GET" action="index.html">
-            <input type="submit" value="Save Trip"> 
+            <input type="submit" value="Save Trip" id="saveBtn2"> 
         </form>
         <!-- Notes -->
         <section class="notes">
